@@ -35,7 +35,7 @@ export function axiosGet(url, params = {}) {
 	return service({
 		url: url,
 		method: 'get',
-		headers: {},
+		headers: {'Content-Type': 'application/json;charset=UTF-8'},
 		params
 	})
 }
@@ -43,7 +43,7 @@ export function axiosGet(url, params = {}) {
 //封装post请求
 export function axiosPost(url, data = {}) {
 	console.log(url);
-	console.log(params);
+	console.log(data);
 	//默认配置 
 	let sendObject = {
 		url: url,
