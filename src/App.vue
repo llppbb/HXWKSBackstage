@@ -43,8 +43,7 @@
 	
 	.el-main {
 		background-color:#585F66;
-		color: #333;
-		line-height: 160px;
+		color: #333; 
 	}
 	
 	.el-header {
