@@ -30,6 +30,7 @@ service.interceptors.response.use(
 
 export function axiosGet(url, params = {}) {
 	params.t = new Date().getTime(); //get方法加一个时间参数,解决ie下可能缓存问题.
+	params.token=sessionStorage.getItem("token"); //默认每个接口都穿传oken
 	console.log(url);
 	console.log(params);
 	return service({
@@ -44,6 +45,7 @@ export function axiosGet(url, params = {}) {
 export function axiosPost(url, data = {}) {
 	console.log(url);
 	console.log(data);
+	data.token=sessionStorage.getItem("token"); //默认每个接口都穿传oken
 	//默认配置 
 	let sendObject = {
 		url: url,

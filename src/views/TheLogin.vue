@@ -71,7 +71,7 @@
 //			        });
 //			        return false;
 //				}
-				this.axiosGet("http://app.dev.huaxiweiying.com/zxy/HXXCServiceAdmin/admin/login", {
+				this.axiosGet( this.Global.httpUrl+"HXXCServiceAdmin/admin/login", {
 					name: this.userForm.name,
 					password: this.userForm.pass,
 					code:  this.userForm.code
